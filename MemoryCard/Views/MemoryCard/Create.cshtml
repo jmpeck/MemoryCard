@@ -1,0 +1,41 @@
+﻿@model MemoryCard.Models.Card
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>What subject is this flashcard for?</h2>
+
+@using (var form = Html.BeginForm("ActuallyCreate", "MemoryCard"))
+{
+
+<div class="row">
+    @Html.DropDownListFor(x => x.Subject,
+                        new SelectList(Enum.GetValues(typeof(MemoryCard.Models.Subject))),
+                        "Select Subject")
+</div>
+
+<h2>What do you want on the front?</h2>
+
+<div class="row">
+    <div class="md-col-6">Front:</div>
+    <div class="md-col-6">
+        @Html.TextBoxFor(x => x.SideOne)
+        @Html.ValidationMessageFor(model => model.SideOne, "Required", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="row">
+    <div class="md-col-6">Back:</div>
+    <div class="md-col-6">
+        @Html.TextBoxFor(x => x.SideTwo)
+        @Html.ValidationMessageFor(model => model.SideTwo, "Required", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="md-col-12"><input type="submit" value="Create Flashcard" /></div>
+</div>
+
+}
+
