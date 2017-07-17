@@ -197,6 +197,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\MemoryCard\Create.cshtml" />
     <Content Include="Views\MemoryCard\Cards.cshtml" />
+    <Content Include="Views\MemoryCard\Update.cshtml" />
+    <Content Include="Views\MemoryCard\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

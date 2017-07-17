@@ -44,16 +44,29 @@ namespace MemoryCard.DAL
 
         }
 
-        public void DeleteCard(int cardId)
+        public void DeleteCard(int id)
         {
             using (MemoryCardContext context = GetContext())
             {
-                var card = new Card() { CardID = cardId };
-                context.Entry(card).State = EntityState.Deleted;
+                var cardToRemove = context.Cards.Find(id);
+                context.Cards.Remove(cardToRemove);
+                
 
                 context.SaveChanges();
             }
         }
+
+        public List<Card> GetAll()
+        {
+            List<Card> cards = new List<Card>();
+            using (MemoryCardContext context = GetContext())
+            {
+                cards = context.Cards.ToList();
+            }
+
+            return cards;
+        }
+
 
         public Card GetById(int id)
         {

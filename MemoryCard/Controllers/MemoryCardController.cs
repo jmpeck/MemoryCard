@@ -46,5 +46,39 @@ namespace MemoryCard.Controllers
             repository.UpdateCard(card);
             return RedirectToAction("Cards");
         }
+
+        [HttpGet]
+        public ActionResult Cards()
+        {
+            repository = new Repository();
+            var cards = repository.GetAll();
+
+            return View(cards);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            repository = new Repository();
+            var card = repository.GetById(id);
+            return View(card);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(Card card)
+        {
+            repository = new Repository();
+            repository.DeleteCard(card.CardID);
+            return RedirectToAction("Cards");
+        }
+
+        [HttpGet]
+        public ActionResult Details(int id)
+        {
+            repository = new Repository();
+
+            return View(repository.GetById(id));
+        }
+
     }
 }
