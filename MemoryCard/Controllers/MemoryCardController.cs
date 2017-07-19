@@ -80,5 +80,16 @@ namespace MemoryCard.Controllers
             return View(repository.GetById(id));
         }
 
+        [HttpGet]
+        public ActionResult Practice()
+        {
+            repository = new Repository();
+            var cards = repository.GetAll();
+
+            return View(cards);
+        }
+
+
+
     }
 }

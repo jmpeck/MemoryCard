@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MemoryCard.Models.Card>
+
+@{
+    ViewBag.Title = "Cards";
+}
+
+<h2>Cards</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SideOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SideTwo)
+        </th>
+        <th></th>
+    </tr>
+   
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SideOne)
+            </td>
+            <td id=@Html.DisplayFor(modelItem => item.CardID) style="display:none;">
+                @Html.DisplayFor(modelItem => item.SideTwo)
+            </td>
+            <td>
+                <a href="javascript:;" onClick="document.getElementById(@Html.DisplayFor(modelItem => item.CardID)).style.display='block';">Reveal Side Two</a>
+            </td>
+        </tr>
+    }
+
+</table>
