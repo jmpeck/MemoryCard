@@ -2,14 +2,15 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>John's Flashcard Maker</h1>
+
+<div class="row">
+    <h3>Welcome to my flashcard maker. Click the "Create" button to create a flashcard. If you've already created some flashchards, click "Practice" start memorizing.</h3>
 </div>
 
 <div class="row">
-    <p>Welcome to my flashcard maker. Click below to create some flashcards.</p>
-</div>
+   @Html.ActionLink("Create", "Create", "MemoryCard", new { @class = "btn btn-default glyphicon glyphicon-flash" })
+ </div>
 
 <div class="row">
-   @Html.ActionLink("click here!", "Create", "MemoryCard")
+@Html.ActionLink("Practice", "Practice", "MemoryCard", new { @class = "btn btn-default glyphicon glyphicon-flash" })
  </div>

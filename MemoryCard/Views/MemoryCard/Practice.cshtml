@@ -37,7 +37,7 @@
                 @Html.DisplayFor(modelItem => item.SideTwo)
             </td>
             <td>
-                <a href="javascript:;" onClick="document.getElementById(@Html.DisplayFor(modelItem => item.CardID)).style.display='block';">Reveal Side Two</a>
+                <a href="javascript:;" id="show" onClick="document.getElementById(@Html.DisplayFor(modelItem => item.CardID)).style.display='block';this.style.display='none';">Reveal Side Two</a>
             </td>
         </tr>
     }

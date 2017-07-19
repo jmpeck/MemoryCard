@@ -1,7 +1,4 @@
-﻿*
-{
-    background-color: tomato;
-}
+﻿
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -25,4 +22,17 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/* Color changes to bootstrap default*/
+#navbar-custom {
+    background-color: #F5E2C8;
+}
+
+#navbar-custom a {
+    background-color: #F5E2C8;
+}
+
+#navbar-custom-2 {
+    background-color: #B2675E;
 }
