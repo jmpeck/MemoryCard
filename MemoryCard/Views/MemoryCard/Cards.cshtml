@@ -9,7 +9,9 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+@*This creates a table to show all the cards currently in the database*@
+<table class="table table-responsive table-hover table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Subject)
@@ -34,6 +36,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.SideTwo)
         </td>
+        @*This allows the user to edit or delete a desired card*@
         <td>
             @Html.ActionLink("Edit", "Update", new { id=item.CardID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.CardID })

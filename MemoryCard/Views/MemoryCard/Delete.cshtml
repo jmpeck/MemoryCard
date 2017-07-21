@@ -6,6 +6,7 @@
 <h4>Card</h4>
 <hr />
 
+    @*displays the card infomation to be deleted*@
 <dl class="dl-horizontal">
     <dt>
         @Html.DisplayNameFor(model => model.SideOne)
@@ -31,6 +32,7 @@
 
 </dl>
 
+    @*form to post delete action*@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()

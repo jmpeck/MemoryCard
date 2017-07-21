@@ -5,11 +5,12 @@
 }
 
 <h2>Cards</h2>
-
+@*This page allows the writer to guess and reveal the second side of cards*@
+@*The subject of the cards is determined previously in the CardBySubject view*@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table class="table table-responsive table-striped table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Subject)

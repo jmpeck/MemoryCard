@@ -13,6 +13,7 @@
     @Html.DropDownListFor(x => x.Subject,
                         new SelectList(Enum.GetValues(typeof(MemoryCard.Models.Subject))),
                         "Select Subject")
+    @Html.ValidationMessageFor(model => model.SideOne, "Required", new { @class = "text-danger" })
 </div>
 
 <h2>What do you want on the front?</h2>

@@ -5,17 +5,20 @@
 
 
     <div class="row">
-        <h3>Welcome to my flashcard maker. Click the "Create" button to create a flashcard. If you've already created some flashchards, click "Practice" start memorizing.</h3>
+        <h3>Welcome to my flashcard maker. Click the "Create" button to create a flashcard. If you've already created some flashchards, click "Practice" to start memorizing.</h3>
     </div>
 
 
-    <div class="row">
-    <div class="btn btn-default btn btn-default glyphicon glyphicon-flash">
-        @Html.ActionLink("Create", "Create", "MemoryCard")
+  
+<div class="btn-group-lg">
+        @Html.ActionLink("Create", "Create", "MemoryCard", null, new { @class = "btn btn-default glyphicon glyphicon-flash" })
+    
 
-    </div>
 
-    <div class="btn btn-default btn btn-default glyphicon glyphicon-flash">
-        @Html.ActionLink("Practice", "CardBySubject", "MemoryCard")
-    </div>
+
+
+        @Html.ActionLink("Practice", "CardBySubject", "MemoryCard", null, new { @class = "btn btn-default glyphicon glyphicon-flash" })
+</div>    
+     
+   
     

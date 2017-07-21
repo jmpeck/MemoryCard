@@ -1,8 +1,11 @@
 ﻿@model MemoryCard.Models.Card
 
+@*This form allows the user to select the subject they want to practice*@
+
 @using (var form = Html.BeginForm("Practice", "MemoryCard"))
 {
 
+    <h2>Pick the subject you want to study.</h2>
     <div class="row">
         @Html.DropDownListFor(x => x.Subject,
                          new SelectList(Enum.GetValues(typeof(MemoryCard.Models.Subject))),
@@ -10,6 +13,6 @@
     </div>
 
     <div class="row">
-        <div class="md-col-12"><input type="submit" value="Create Flashcard" /></div>
-    </div>
+        <input class="md-col-12 btn btn-default glyphicon glyphicon-flash" type="submit" value="Practice" />
+   </div>
 }

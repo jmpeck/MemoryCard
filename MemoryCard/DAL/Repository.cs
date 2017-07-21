@@ -18,6 +18,8 @@ namespace MemoryCard.DAL
             return context;
         }
 
+        //this method creates a new flashcard
+
         public void AddCard(Card card)
         {
             using (MemoryCardContext context = GetContext())
@@ -27,6 +29,8 @@ namespace MemoryCard.DAL
                 context.SaveChanges();
             }
         }
+
+        //this method updates a flashcard
 
         public void UpdateCard(Card card)
         {
@@ -43,6 +47,7 @@ namespace MemoryCard.DAL
             }
 
         }
+        //this method deletes a flashcard
 
         public void DeleteCard(int id)
         {
@@ -56,6 +61,8 @@ namespace MemoryCard.DAL
             }
         }
 
+        //this method lists all the flashcards in the database
+
         public List<Card> GetAll()
         {
             List<Card> cards = new List<Card>();
@@ -68,6 +75,8 @@ namespace MemoryCard.DAL
         }
 
 
+        //this method finds saved flashcards by ID
+
         public Card GetById(int id)
         {
             Card card = null;
@@ -78,6 +87,8 @@ namespace MemoryCard.DAL
 
             return card;
         }
+
+        //this method pulls out cards according to the entered subject
 
         public List<Card> SeeCardsBySubject(string subject)
         {
