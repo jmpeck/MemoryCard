@@ -10,7 +10,7 @@ namespace MemoryCard.Models
     {
         public int CardID { get; set; }
         [Required]
-        public Subject Subject { get; set; }
+        public string Subject { get; set; }
         public string SideOne { get; set; }
         public string SideTwo { get; set; }
         

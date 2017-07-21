@@ -80,5 +80,30 @@ namespace MemoryCard.Controllers
             return View(repository.GetById(id));
         }
 
+        [HttpPost]
+        public ActionResult Practice(string subject)
+        {
+            repository = new Repository();
+            var cards = repository.SeeCardsBySubject(subject);
+
+            return View(cards);
+        }
+
+        [HttpGet]
+        public ActionResult CardBySubject()
+        {
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SeeCardsBySubject(string subject)
+        {
+            repository = new Repository();
+            var cardsBySubject = repository.SeeCardsBySubject(subject);
+
+            return View(cardsBySubject);
+        }
+
     }
 }

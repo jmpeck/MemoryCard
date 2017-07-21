@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top" id="navbar-custom">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,13 +18,13 @@
                 </button>
                 @Html.ActionLink("John's Flashcard Maker", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" id="navbar-custom">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Create Cards", "Create", "MemoryCard")</li>
-                    <li>@Html.ActionLink("Practice", "Cards", "MemoryCard")</li>
-                    <li>@Html.ActionLink("Edit Cards", "Update", "MemoryCard")</li>
+                    <li>@Html.ActionLink("Edit Cards", "Cards", "MemoryCard")</li>
+                    <li>@Html.ActionLink("Practice", "CardBySubject", "MemoryCard")</li>
 
                 </ul>
             </div>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+//The appication mostly uses the home controller to bring up the index page.
 namespace MemoryCard.Controllers
 {
     public class HomeController : Controller
