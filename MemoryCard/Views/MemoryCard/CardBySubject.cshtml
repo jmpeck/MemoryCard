@@ -1,0 +1,15 @@
+﻿@model MemoryCard.Models.Card
+
+@using (var form = Html.BeginForm("Practice", "MemoryCard"))
+{
+
+    <div class="row">
+        @Html.DropDownListFor(x => x.Subject,
+                         new SelectList(Enum.GetValues(typeof(MemoryCard.Models.Subject))),
+                         "Select Subject")
+    </div>
+
+    <div class="row">
+        <div class="md-col-12"><input type="submit" value="Create Flashcard" /></div>
+    </div>
+}

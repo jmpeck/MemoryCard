@@ -201,6 +201,8 @@
     <Content Include="Views\MemoryCard\Delete.cshtml" />
     <Content Include="Views\MemoryCard\Practice.cshtml" />
     <Content Include="Views\MemoryCard\ActuallyPractice2.cshtml" />
+    <Content Include="Views\MemoryCard\CardBySubject.cshtml" />
+    <Content Include="Views\MemoryCard\SeeCardsBySubject.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

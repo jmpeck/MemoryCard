@@ -79,18 +79,17 @@ namespace MemoryCard.DAL
             return card;
         }
 
-        public IQueryable<Card> GetBySubject(Subject id)
+        public List<Card> SeeCardsBySubject(string subject)
         {
-            IQueryable<Card> cards;
+            List<Card> cardsBySubject = new List<Card>();
             using (MemoryCardContext context = GetContext())
             {
-                cards = context.Cards
-                    .Where(c => c.Subject == id);
-                    
-                        
+                cardsBySubject = context.Cards.Where(x => x.Subject == subject.ToString()).ToList();
             }
 
-            return cards;
+            return cardsBySubject;
         }
+
+             
     }
 }
